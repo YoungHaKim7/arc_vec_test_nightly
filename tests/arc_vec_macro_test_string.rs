@@ -1,5 +1,5 @@
-use arc_vec::alloc::arc_vec::ArcVec;
-use arc_vec::arc_vec;
+use arc_vec_test_nightly::alloc::arc_vec::ArcVec;
+use arc_vec_test_nightly::arc_vec;
 
 #[test]
 fn arc_vec_macro_test_string() {

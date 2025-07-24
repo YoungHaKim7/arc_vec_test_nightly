@@ -1,4 +1,4 @@
-use arc_vec::alloc::arc_vec::ArcVec;
+use arc_vec_test_nightly::alloc::arc_vec::ArcVec;
 
 fn main() {
     let my_arc_vec = ArcVec::new();

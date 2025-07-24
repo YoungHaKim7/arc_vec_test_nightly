@@ -5,7 +5,7 @@
 //! ```
 //! // Consider Arc<[T]> over Vec <T>
 //! // Arc<[T]>
-//! use arc_vec::alloc::arc_vec::ArcVec;
+//! use arc_vec_test_nightly::alloc::arc_vec::ArcVec;
 //!
 //! let my_num_arcvec_init: ArcVec<i32> = ArcVec::new();
 //!
@@ -14,7 +14,7 @@
 //! # example
 //!
 //! ```
-//! use arc_vec::alloc::arc_vec::ArcVec;
+//! use arc_vec_test_nightly::alloc::arc_vec::ArcVec;
 //!
 //! let my_arc_vec = ArcVec::new();
 //! my_arc_vec.push(10);

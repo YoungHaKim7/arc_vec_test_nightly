@@ -1,4 +1,4 @@
-use arc_vec::arc_vec;
+use arc_vec_test_nightly::arc_vec;
 
 fn main() {
     let arc_test = arc_vec!(2);

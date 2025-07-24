@@ -195,13 +195,18 @@ impl<T> ArcVec<T> {
     }
 }
 
-impl<T: Ord> ArcVec<T> {
+use rayon::prelude::ParallelSliceMut;
+
+impl<T: Ord + Send + Sync> ArcVec<T> {
     pub fn sort(&self) {
         self.sort_by(|a, b| a.cmp(b));
     }
 
     pub fn parallel_sort(&self) {
-        self.parallel_sort();
+        let mut raw = self.data.lock().unwrap();
+        let slice =
+            unsafe { std::slice::from_raw_parts_mut(raw.buf.as_mut_ptr() as *mut T, raw.len) };
+        slice.par_sort();
     }
 }
 

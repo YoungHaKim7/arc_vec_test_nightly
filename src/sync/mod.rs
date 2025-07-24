@@ -9,10 +9,10 @@ where
     let (mut chunks, len) = {
         let raw = data.data.lock().unwrap();
         let len = raw.len;
-        let mut chunks: Vec<T> = Vec::new();
+        let _chunks: Vec<T> = Vec::new();
 
         // Extract all values
-        let mut values: Vec<T> = (0..raw.len)
+        let values: Vec<T> = (0..raw.len)
             .map(|i| unsafe { raw.buf[i].assume_init_ref().clone() })
             .collect();
 
